@@ -1,54 +1,96 @@
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white py-20 px-6">
-      <h1 className="text-5xl font-bold text-center mb-10">
-        Contact Us
-      </h1>
+    <section className="min-h-screen bg-slate-950 text-white py-16 px-6">
+      <div className="max-w-5xl mx-auto">
 
-      <div className="max-w-3xl mx-auto bg-slate-800 p-8 rounded-2xl">
+        <div className="text-center mb-12">
+          <h1 className="text-5xl font-bold mb-4">
+            Get Your Free Solar Consultation
+          </h1>
 
-        <form className="flex flex-col gap-4">
+          <p className="text-gray-400">
+            Tell us about your property and our team will contact you.
+          </p>
+        </div>
 
-          <input
-            type="text"
-            placeholder="Full Name"
-            className="p-4 rounded-lg bg-slate-700"
-          />
+        <div className="bg-slate-900 rounded-3xl p-8 shadow-xl">
 
-          <input
-            type="email"
-            placeholder="Email"
-            className="p-4 rounded-lg bg-slate-700"
-          />
+          <div className="grid md:grid-cols-2 gap-6">
 
-          <input
-            type="tel"
-            placeholder="Phone Number"
-            className="p-4 rounded-lg bg-slate-700"
-          />
+            <div>
+              <label className="block mb-2">Full Name</label>
+              <input
+                type="text"
+                placeholder="Enter your name"
+                className="w-full p-4 rounded-xl bg-slate-800 border border-slate-700"
+              />
+            </div>
 
-          <input
-            type="text"
-            placeholder="Address"
-            className="p-4 rounded-lg bg-slate-700"
-          />
+            <div>
+              <label className="block mb-2">Phone Number</label>
+              <input
+                type="tel"
+                placeholder="Enter phone number"
+                className="w-full p-4 rounded-xl bg-slate-800 border border-slate-700"
+              />
+            </div>
 
-          <textarea
-            rows="4"
-            placeholder="Tell us about your solar needs"
-            className="p-4 rounded-lg bg-slate-700"
-          />
+            <div>
+              <label className="block mb-2">Email Address</label>
+              <input
+                type="email"
+                placeholder="Enter email"
+                className="w-full p-4 rounded-xl bg-slate-800 border border-slate-700"
+              />
+            </div>
 
-          <button
-            type="submit"
-            className="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-lg"
-          >
-            Submit Request
+            <div>
+              <label className="block mb-2">Property Type</label>
+              <select className="w-full p-4 rounded-xl bg-slate-800 border border-slate-700">
+                <option>Residential</option>
+                <option>Commercial</option>
+                <option>Industrial</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block mb-2">
+                Monthly Electricity Bill (₹)
+              </label>
+              <input
+                type="number"
+                placeholder="e.g. 5000"
+                className="w-full p-4 rounded-xl bg-slate-800 border border-slate-700"
+              />
+            </div>
+
+            <div>
+              <label className="block mb-2">City</label>
+              <input
+                type="text"
+                placeholder="Enter city"
+                className="w-full p-4 rounded-xl bg-slate-800 border border-slate-700"
+              />
+            </div>
+
+          </div>
+
+          <div className="mt-6">
+            <label className="block mb-2">Message</label>
+
+            <textarea
+              rows="5"
+              placeholder="Tell us about your solar requirement..."
+              className="w-full p-4 rounded-xl bg-slate-800 border border-slate-700"
+            />
+          </div>
+
+          <button className="mt-8 bg-orange-500 hover:bg-orange-600 px-8 py-4 rounded-xl font-semibold">
+            Request Free Consultation
           </button>
 
-        </form>
-
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
