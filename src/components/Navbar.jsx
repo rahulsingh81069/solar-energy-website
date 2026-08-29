@@ -18,6 +18,10 @@ export default function Navbar() {
           Calculator
         </Link>
 
+        <Link to="/services" className="hover:text-green-400">
+         Services
+        </Link>
+
       </div>
 
       <button className="bg-green-500 px-5 py-2 rounded-lg">
