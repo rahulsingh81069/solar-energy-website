@@ -1,15 +1,15 @@
 export default function Testimonials() {
   const reviews = [
     {
-      name: "Michael Johnson",
+      name: "Shivam Singh",
       review: "My electric bill dropped by 70%. Best investment for my home.",
     },
     {
-      name: "Sarah Williams",
+      name: "Prem",
       review: "Professional team and excellent customer service.",
     },
     {
-      name: "David Brown",
+      name: "Banke Bihari",
       review: "Installed in just a few days and started saving immediately.",
     },
   ];
