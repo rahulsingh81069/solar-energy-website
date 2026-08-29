@@ -1,6 +1,12 @@
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+
 function App() {
   return (
-    <h1>SolarX Website</h1>
+    <>
+      <Navbar />
+      <Hero />
+    </>
   );
 }
 
