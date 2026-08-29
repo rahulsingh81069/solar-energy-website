@@ -1,18 +1,26 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Stats from "./components/Stats";
-import Features from "./components/Features";
-import Calculator from "./components/Calculator";
+
+import Home from "./pages/Home";
+import CalculatorPage from "./pages/CalculatorPage";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
+
       <Navbar />
-      <Hero />
-      <Stats />
-      <Features />
-      <Calculator />
-    </>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+
+        <Route
+          path="/calculator"
+          element={<CalculatorPage />}
+        />
+      </Routes>
+
+    </BrowserRouter>
   );
 }
 
