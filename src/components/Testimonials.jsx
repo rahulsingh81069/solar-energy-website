@@ -9,7 +9,7 @@ export default function Testimonials() {
       review: "Professional team and excellent customer service.",
     },
     {
-      name: "Banke Bihari",
+      name: "Banke",
       review: "Installed in just a few days and started saving immediately.",
     },
   ];
