@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Calculator() {
   const [bill, setBill] = useState("");
@@ -31,11 +32,11 @@ export default function Calculator() {
 
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold mb-4">
-            Solar Savings Calculator
+            JayDada Solar Savings Calculator
           </h1>
 
           <p className="text-gray-400 text-lg">
-            Discover the ideal solar solution for your home or business.
+            Estimate your solar system size, savings and investment returns in minutes.
           </p>
         </div>
 
@@ -164,14 +165,15 @@ export default function Calculator() {
                 </h3>
               </div>
 
-              <div>
-                <p className="text-gray-300">
-                  Estimated Monthly Savings
-                </p>
-                <h3 className="text-2xl font-bold text-green-400">
+              <div className="bg-white/10 p-4 rounded-xl">
+                  <p className="text-gray-300">
+                        Monthly Savings
+                  </p>
+
+                  <h3 className="text-3xl font-bold text-green-400">
                     {result ? `₹${result.monthlySavings}` : "--"}
-                </h3>
-              </div>
+                  </h3>
+                </div>
 
               <div>
                 <p className="text-gray-300">
@@ -200,9 +202,12 @@ export default function Calculator() {
                 </h3>
               </div>
 
-              <button className="mt-6 bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-xl font-semibold">
+              <Link
+                to="/contact"
+                 className="inline-block mt-6 bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-xl font-semibold"
+              >
                 Get Free Quote
-              </button>
+              </Link>
 
             </div>
 
