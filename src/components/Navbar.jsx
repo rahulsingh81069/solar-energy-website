@@ -22,6 +22,10 @@ export default function Navbar() {
          Services
         </Link>
 
+        <Link to="/contact" className="hover:text-green-400">
+          Contact
+        </Link>
+
       </div>
 
       <button className="bg-green-500 px-5 py-2 rounded-lg">
