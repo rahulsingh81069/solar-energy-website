@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -31,9 +32,14 @@ export default function Navbar() {
           Calculator
         </Link>
 
-        <Link to="/services" className="hover:text-green-400">
-         Services
-        </Link>
+        <NavLink
+          to="/services"
+           className={({ isActive }) =>
+            isActive ? "text-green-400 font-bold" : "hover:text-green-400"
+          }
+          >
+            Services
+        </NavLink>
 
         <Link to="/contact" className="hover:text-green-400">
           Contact
