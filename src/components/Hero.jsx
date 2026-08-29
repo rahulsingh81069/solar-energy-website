@@ -1,26 +1,42 @@
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-r from-blue-950 via-green-700 to-yellow-500">
+    <section className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-900 to-green-800 text-white flex items-center">
 
-      <h1 className="text-6xl font-bold mb-6">
-        Power Your Home With Solar
-      </h1>
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
 
-      <p className="text-xl max-w-2xl mb-8">
-        Reduce electricity bills, increase property value,
-        and switch to clean renewable energy.
-      </p>
+        <div>
+          <p className="text-green-400 font-semibold mb-4">
+            CLEAN • AFFORDABLE • RENEWABLE
+          </p>
 
-      <div className="flex gap-4">
-        <button className="bg-white text-black px-6 py-3 rounded-xl font-semibold">
-          Calculate Savings
-        </button>
+          <h1 className="text-6xl font-bold mb-6">
+            Save Thousands With Solar Energy
+          </h1>
 
-        <button className="border border-white px-6 py-3 rounded-xl">
-          Learn More
-        </button>
+          <p className="text-xl text-gray-300 mb-8">
+            Switch to clean solar power and reduce your
+            electricity bills while increasing your property value.
+          </p>
+
+          <div className="flex gap-4">
+            <button className="bg-green-500 px-8 py-3 rounded-xl font-semibold hover:bg-green-600">
+              Get Free Quote
+            </button>
+
+            <button className="border border-white px-8 py-3 rounded-xl">
+              Learn More
+            </button>
+          </div>
+        </div>
+
+        <div className="flex justify-center">
+          <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200"
+            alt="Solar Panels"
+            className="rounded-3xl shadow-2xl w-full max-w-xl"
+          />
+        </div>
+
       </div>
-
     </section>
   );
 }

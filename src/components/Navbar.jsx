@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center px-10 py-5 bg-slate-950">
+    <nav className="sticky top-0 z-50 flex justify-between items-center px-10 py-5 bg-slate-950/90 backdrop-blur-md text-white">
 
       <h1 className="text-3xl font-bold text-green-400">
         SolarX
