@@ -4,6 +4,7 @@ import Features from "../components/Features";
 import Testimonials from "../components/Testimonials";
 import WhyChooseUs from "../components/WhyChooseUs";
 import CTA from "../components/CTA";
+import FAQ from "../components/FAQ";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <WhyChooseUs />
       <CTA />
       <Testimonials />
+      <FAQ />
     </>
   );
 }
