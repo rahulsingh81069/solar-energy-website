@@ -10,12 +10,12 @@ export default function Hero() {
           </p>
 
           <h1 className="text-6xl font-bold mb-6">
-            Save Thousands With Solar Energy
+            Power Your Future With JayDada Solar
           </h1>
 
           <p className="text-xl text-gray-300 mb-8">
-            Switch to clean solar power and reduce your
-            electricity bills while increasing your property value.
+            Trusted residential and commercial solar solutions designed
+            to reduce energy costs and create a greener future.
           </p>
 
           <div className="flex gap-4">
