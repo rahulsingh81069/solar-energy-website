@@ -2,6 +2,27 @@ import { useState } from "react";
 
 export default function Calculator() {
   const [bill, setBill] = useState("");
+  const [result, setResult] = useState(null);
+
+  const calculateSolar = () => {
+    if (!bill) return;
+
+    const monthlyBill = Number(bill);
+
+    const capacity = (monthlyBill / 700).toFixed(1);
+    const generation = Math.round(capacity * 120);
+    const monthlySavings = Math.round(monthlyBill * 0.8);
+    const annualSavings = monthlySavings * 12;
+    const systemCost = Math.round(capacity * 65000);
+
+    setResult({
+      capacity,
+      generation,
+      monthlySavings,
+      annualSavings,
+      systemCost,
+    });
+  };
 
   return (
     <section className="min-h-screen bg-slate-950 text-white py-16 px-6">
@@ -102,7 +123,9 @@ export default function Calculator() {
             </div>
 
             <div className="flex gap-4">
-              <button className="bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-xl font-semibold">
+              <button
+                onClick={calculateSolar}
+                className="bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-xl font-semibold">
                 Calculate
               </button>
 
@@ -127,42 +150,54 @@ export default function Calculator() {
                 <p className="text-gray-300">
                   Estimated Solar Capacity Required
                 </p>
-                <h3 className="text-2xl font-bold">--</h3>
+                <h3 className="text-2xl font-bold">
+                  {result ? `${result.capacity} kW` : "--"}
+                </h3>
               </div>
 
               <div>
                 <p className="text-gray-300">
                   Estimated Monthly Solar Generation
                 </p>
-                <h3 className="text-2xl font-bold">--</h3>
+                <h3 className="text-2xl font-bold">
+                     {result ? `${result.generation} kWh` : "--"}
+                </h3>
               </div>
 
               <div>
                 <p className="text-gray-300">
                   Estimated Monthly Savings
                 </p>
-                <h3 className="text-2xl font-bold">--</h3>
+                <h3 className="text-2xl font-bold text-green-400">
+                    {result ? `₹${result.monthlySavings}` : "--"}
+                </h3>
               </div>
 
               <div>
                 <p className="text-gray-300">
                   Estimated Annual Savings
                 </p>
-                <h3 className="text-2xl font-bold">--</h3>
+                <h3 className="text-2xl font-bold text-green-400">
+                    {result ? `₹${result.annualSavings}` : "--"}
+                </h3>
               </div>
 
               <div>
                 <p className="text-gray-300">
                   Estimated Solar System Cost
                 </p>
-                <h3 className="text-2xl font-bold">--</h3>
+                <h3 className="text-2xl font-bold">
+                    {result ? `₹${result.systemCost}` : "--"}
+                </h3>
               </div>
 
               <div>
                 <p className="text-gray-300">
                   Estimated Investment Information
                 </p>
-                <h3 className="text-2xl font-bold">--</h3>
+                <h3 className="text-2xl font-bold">
+                    {result ? "Recommended" : "--"}
+                </h3>
               </div>
 
               <button className="mt-6 bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-xl font-semibold">
