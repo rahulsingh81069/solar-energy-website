@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Services from "./pages/Services";
 import CalculatorPage from "./pages/CalculatorPage";
 import Contact from "./pages/Contact";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <Route path="/calculator" element={<CalculatorPage />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-
+      <WhatsAppButton />
       <Footer />
     </BrowserRouter>
   );
